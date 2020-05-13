@@ -19,12 +19,12 @@ namespace Polymorphism
 
             if (nomorPrinter == 1)
                 printer = new Epson();
-            else if (nomorPrinter == 2)
+            if (nomorPrinter == 2)
                 printer = new Canon();
             else if (nomorPrinter == 3)
-                printer = new Canon();
-            else
                 printer = new LaserJet();
+            else
+                Console.WriteLine("Error : Pilihan Tidak Ada");
 
             printer.Show();
             printer.Print();
